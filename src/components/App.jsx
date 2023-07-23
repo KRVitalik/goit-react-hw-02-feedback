@@ -3,6 +3,7 @@ import Section from "./Section/Section";
 import FeedbackOptions from "./FeedbackOptions/FeedbackOptions";
 import Statistics from "./Statistics/Statistics";
 import Notification from "./Notification/Notification";
+import { Container } from "./App.styled";
 
 class App extends Component {
     state = {
@@ -36,7 +37,7 @@ class App extends Component {
   
   
   render() {
-      return <div>
+      return <Container>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={this.state}
@@ -52,7 +53,7 @@ class App extends Component {
             total={this.countTotalFeedback()}
             positivePercentage={this.countPositiveFeedbackPercentage()} />
         </Section>}
-    </div>;
+    </Container>;
   }
 }
  
